@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment_3.ReverseDetailPage"
+             Title="Kobe Reverse Grinches">
+    <ContentPage.Resources>
+
+        <Color x:Key="itemColor">#000000</Color>
+        <Color x:Key="priceColor">#ff0000</Color>
+        <Color x:Key="stockColor">#00ff00</Color>
+        <Color x:Key="noStockColor">#ff0000</Color>
+
+        <Style TargetType="Label" x:Key="itemName">
+            <Setter Property ="TextColor" Value="{StaticResource itemColor}"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="itemPrice">
+            <Setter Property="TextColor" Value="{StaticResource priceColor}"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style TargetType="Label" x:Key="itemStock">
+            <Setter Property="TextColor" Value="{StaticResource stockColor}"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        <Style TargetType="Label" x:Key="noStock">
+            <Setter Property="TextColor" Value="{StaticResource noStockColor}"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        
+    </ContentPage.Resources>
+    <VerticalStackLayout Padding="24" Spacing="18">
+        <!--ROW 1 -->
+        <Grid ColumnDefinitions="*,Auto">
+            <!--Image-->
+            <Image
+                 Source="reverse.jpg"
+                 HeightRequest="150"
+                 WidthRequest="150"
+                 HorizontalOptions="Center"/>
+        </Grid>
+        <Grid ColumnDefinitions="*,Auto">
+            <!--Label-->
+            <Label Text="Kobe 6 Reverse Grinches"
+        FontSize="32"
+        FontAttributes="Bold"
+        HorizontalOptions="Center"/>
+        </Grid>
+        <Grid>
+            <!--Price-->
+            <Label Text="$500"
+        FontSize="24"
+        FontAttributes="Bold"
+        HorizontalOptions="Center"
+        Style="{StaticResource itemPrice}"/>
+        </Grid>
+        <Grid>
+            <!--Description-->
+            <Label Text="The Kobe 6 Reverse Grinches is a popular basketball shoe designed for both indoor and outdoor play."
+    FontSize="18"
+    HorizontalOptions="Center"/>
+        </Grid>
+        <Grid>
+            <!--Stock-->
+            <Label Text="Out of Stock"
+        FontSize="18"
+        HorizontalOptions="Center"
+        Style="{StaticResource noStock}"/>
+        </Grid>
+
+        <Grid>
+            <!--Quantity Entry-->
+            <Entry Placeholder="Enter quantity" 
+             HorizontalTextAlignment="Center" x:Name="quantityEntry"/>
+        </Grid>
+        <Grid>
+            <!--Cart Button-->
+            <Button Text="Add To Cart" Clicked="AddToCartClicked" WidthRequest="200" x:Name="Cart" />
+        </Grid>
+        <Grid>
+            <!--Result Label-->
+            <Label HorizontalTextAlignment="Center" x:Name="resultLabel"/>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>
