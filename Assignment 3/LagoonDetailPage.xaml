@@ -17,13 +17,15 @@
 
         <Style TargetType="Label" x:Key="itemPrice">
             <Setter Property="TextColor" Value="{StaticResource priceColor}"/>
-            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
         </Style>
         <Style TargetType="Label" x:Key="itemStock">
             <Setter Property="TextColor" Value="{StaticResource stockColor}"/>
             <Setter Property="FontSize" Value="18"/>
-
-
+        </Style>
+        <Style TargetType="Label" x:Key="itemDescription">
+            <Setter Property="FontSize" Value="18"/>
         </Style>
 
     </ContentPage.Resources>
@@ -40,30 +42,26 @@
             <Grid ColumnDefinitions="*,Auto">
                 <!--Label-->
                 <Label Text="Kobe 10 Proto Blue Lagoon"
-            FontSize="32"
-            FontAttributes="Bold"
-            HorizontalOptions="Center"/>
+                       Style="{StaticResource itemName}"
+                       HorizontalOptions="Center"/>
             </Grid>
             <Grid>
                 <!--Price-->
-                <Label Text="$550"
-            FontSize="24"
-            FontAttributes="Bold"
-            HorizontalOptions="Center"
-            Style="{StaticResource itemPrice}"/>
+                <Label Text="$549.99"
+                       Style="{StaticResource itemPrice}"
+                       HorizontalOptions="Center"/>
             </Grid>
             <Grid>
                 <!--Description-->
                 <Label Text="The Kobe 10 Proto Blue Lagoon is a stylish basketball designed for both indoor and outdoor play."
-        FontSize="18"
-        HorizontalOptions="Center"/>
+                       Style="{StaticResource itemDescription}"
+                       HorizontalOptions="Center"/>
             </Grid>
             <Grid>
                 <!--Stock-->
                 <Label Text="In Stock"
-            FontSize="18"
-            HorizontalOptions="Center"
-            Style="{StaticResource itemStock}"/>
+                       HorizontalOptions="Center"
+                       Style="{StaticResource itemStock}"/>
             </Grid>
             
             <Grid>

@@ -17,15 +17,17 @@
 
         <Style TargetType="Label" x:Key="itemPrice">
             <Setter Property="TextColor" Value="{StaticResource priceColor}"/>
-            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
         </Style>
         <Style TargetType="Label" x:Key="itemStock">
             <Setter Property="TextColor" Value="{StaticResource stockColor}"/>
             <Setter Property="FontSize" Value="18"/>
-
-
         </Style>
-
+        <Style TargetType="Label" x:Key="itemDescription">
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        
     </ContentPage.Resources>
     <VerticalStackLayout Padding="24" Spacing="18">
         <!--ROW 1 -->
@@ -40,28 +42,24 @@
         <Grid ColumnDefinitions="*,Auto">
             <!--Label-->
             <Label Text="Wilson Basketball"
-                FontSize="32"
-                FontAttributes="Bold"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"
+                Style="{StaticResource itemName}"/>
         </Grid>
         <Grid>
             <!--Price-->
             <Label Text="$59.99"
-                FontSize="24"
-                FontAttributes="Bold"
                 HorizontalOptions="Center"
                 Style="{StaticResource itemPrice}"/>
         </Grid>
         <Grid>
             <!--Description-->
             <Label Text="The Wilson Evolution is a high-quality basketball designed for indoor play."
-            FontSize="18"
+            Style="{StaticResource itemDescription}"
             HorizontalOptions="Center"/>
         </Grid>
         <Grid>
             <!--Stock-->
             <Label Text="In Stock"
-                FontSize="18"
                 HorizontalOptions="Center"
                 Style="{StaticResource itemStock}"/>
         </Grid>

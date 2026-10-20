@@ -2,6 +2,8 @@ namespace Assignment_3;
 
 public partial class BallDetailPage : ContentPage
 {
+    string ProductName = "Basketball";
+    double ProductPrice = 59.99;
 	public BallDetailPage()
 	{
 		InitializeComponent();
@@ -18,7 +20,7 @@ public partial class BallDetailPage : ContentPage
 
         if (double.TryParse(quantityEntry.Text, out double parsedNumber))
         {
-            resultLabel.Text = "Added To Cart";
+            resultLabel.Text = $"Added {quantityEntry.Text} {ProductName} to cart.";
         }
         else
         {

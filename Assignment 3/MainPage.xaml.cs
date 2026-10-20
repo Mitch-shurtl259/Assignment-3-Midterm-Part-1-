@@ -2,14 +2,6 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
-        public MainPage()
-        {
-            InitializeComponent();
-            itemList.ItemsSource = items;
-        }
-
         List<string> items =
         [
         "Wilson Basketball",
@@ -17,6 +9,22 @@
             "Kobe 6 Reverse Grinches",
             "Kobe 10 Proto Blue Lagoons"
         ];
+        List<double> prices = 
+        [
+            59.99, 599.99, 499.99, 549.99
+        ];
+        List<string> rows = new List<String>();
+        int count = 0;
+
+        public MainPage()
+        {
+            InitializeComponent();
+            itemList.ItemsSource = items;
+
+        }
+
+        
+
 
 
 

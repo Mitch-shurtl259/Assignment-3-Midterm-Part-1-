@@ -4,7 +4,9 @@ namespace Assignment_3;
 
 public partial class ReverseDetailPage : ContentPage
 {
-	public ReverseDetailPage()
+    string ProductName = "Kobe 6 ReverseGrinches";
+    double ProductPrice = 499.99;
+    public ReverseDetailPage()
 	{
 		InitializeComponent();
         Cart.IsEnabled = false;
@@ -22,7 +24,7 @@ public partial class ReverseDetailPage : ContentPage
 
         if (double.TryParse(quantityEntry.Text, out double parsedNumber))
         {
-            resultLabel.Text = "Added To Cart";
+            resultLabel.Text = $"Added {quantityEntry.Text} of this item.";
         }
         else
         {
